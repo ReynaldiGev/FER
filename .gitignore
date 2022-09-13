@@ -1,64 +1,44 @@
-# Created by https://www.toptal.com/developers/gitignore/api/windows,visualstudiocode,opencv
-# Edit at https://www.toptal.com/developers/gitignore?templates=windows,visualstudiocode,opencv
+bin/
+benchmark/
+out/
+resource.syso
 
-### OpenCV ###
-#OpenCV for Mac and Linux
-#build and release folders
-*/CMakeFiles
-*/CMakeCache.txt
-*/Makefile
-*/cmake_install.cmake
-.DS_Store
+man/*
 
-### VisualStudioCode ###
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
-!.vscode/*.code-snippets
+*.test
+tmp
+t/remote
+t/scutiger
+t/test_count
+t/test_count.lock
 
-# Local History for Visual Studio Code
-.history/
+debian/git-lfs/
+debian/*.log
+debian/files
+debian/*.substvars
+debian/debhelper-build-stamp
+debian/.debhelper
+/.pc
+obj-*
 
-# Built Visual Studio Code Extensions
-*.vsix
+rpm/BUILD*
+rpm/*RPMS
+rpm/*.log
+rpm/SOURCES
 
-### VisualStudioCode Patch ###
-# Ignore all local history of files
-.history
-.ionide
+repos
+docker/*.key
 
-# Support for Project snippet scope
-.vscode/*.code-snippets
+src
+commands/mancontent_gen.go
 
-# Ignore code-workspaces
-*.code-workspace
+po/build
+po/i-reverse.po
+*.mo
+*.pot
+tr/tr_gen.go
 
-### Windows ###
-# Windows thumbnail cache files
-Thumbs.db
-Thumbs.db:encryptable
-ehthumbs.db
-ehthumbs_vista.db
+lfstest-*
+!lfstest-*.go
 
-# Dump file
-*.stackdump
-
-# Folder config file
-[Dd]esktop.ini
-
-# Recycle Bin used on file shares
-$RECYCLE.BIN/
-
-# Windows Installer files
-*.cab
-*.msi
-*.msix
-*.msm
-*.msp
-
-# Windows shortcuts
-*.lnk
-
-# End of https://www.toptal.com/developers/gitignore/api/windows,visualstudiocode,opencv
+vendor/
