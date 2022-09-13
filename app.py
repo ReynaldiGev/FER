@@ -381,13 +381,6 @@ def main():
         with tab3:
             st.header("Business impact ✅")
 
-            # st.write("""
-            #      1. Marketing: In market research helps choose the campaign that is most interested in the market until the product is widely marketed.
-            #      2. Sales: dynamically adjust sales techniques based on consumer responses to the products offered.
-            #      3. Health: detects the patient's face in the waiting room, so it can prioritize the patient first based on facial expressions.
-            #      4. Education: assessing whether students can understand the lessons given based on facial expressions during class.
-            #      5. Automotive: detects whether the driver is tired or stressed based on their facial expressions and provides alerts when the driver is in an unsafe condition based on facial expressions.
-            #      """)
             col1, col2 = st.columns(2)
 
             with col1:
@@ -416,42 +409,8 @@ def main():
                  In this project, a facial expression data will be used which is divided into 5 types of expressions.
                  """)
         with st.expander("See Data Visualization"):
-            eda_chart()
-        
-        #st.markdown("""---""")
-
-        # st.header("**2. Amount of Data👌**")
-
-        # col1, col2 = st.columns(2)
-        # with col1:
-        #     traind = st.checkbox('Train Data')
-        #     if traind:
-        #         for folder in os.listdir(train_data_dir):
-        #             files = gb.glob(pathname= str(train_data_dir+ '/'+ folder + '/*.jpg'))
-        #             st.write(f'Found {len(files)} images in folder {folder}')
-            
-        # with col2:
-        #     testd = st.checkbox('Test Data')
-        #     if testd:
-        #         for folder in os.listdir(validation_data_dir):
-        #             files = gb.glob(pathname= str(validation_data_dir+ '/'+ folder + '/*.jpg'))
-        #             st.write(f'Found {len(files)} images in folder {folder}')
-        
-        
-        #st.markdown("""---""")
-
-        # st.header("**3. Image Specifications📖**")
-        # for folder in os.listdir(train_data_dir):
-        #     files = gb.glob(pathname= str(train_data_dir+ '/'+ folder + '/*.jpg'))
-        # im = Image.open(files[1])
-        # st.write(im.format, im.size, im.mode)
-        # with st.expander("See explanation"):
-        #     st.write("""
-        #          Image Spesification based on PILLOW documentation https://pillow.readthedocs.io/en/stable/handbook/concepts.html#concept-modes.
-        #          1. Images format in JPEG.
-        #          2. Images dimensions 48x48 pixels.
-        #          3. L means 8-bit pixels with 2 color black and white (gray scale) on range 0-255.
-        #          """)
+            eda = Image.open("D:/tes/FER/img/bardata.jpg")
+            st.image(eda, width=300)
 
         st.markdown("""---""")
 
