@@ -32,13 +32,13 @@ from streamlit_webrtc import webrtc_streamer, VideoTransformerBase, RTCConfigura
 
 train_data_dir='dataset/train'
 validation_data_dir='dataset/validation'
-folder_path = 'D:/Facial-Emotion-Recognition-main/'
+folder_path = 'D:/ts/FER/'
 
 temp_file_to_save = './temp_file_1.mp4'
 temp_file_result  = './temp_file_2.mp4'
 temp_file_emot = './temp_file_3.csv'
 temp_file_emot2 = './temp_file_4.txt'
-
+tempathasil = './fotohasil.jpg'
 
 st.set_page_config(
     page_title="DSS Project",
@@ -175,19 +175,19 @@ def write_bytesio_to_file(filename2, bytesio):
             # Copy the BytesIO stream to the output file
                 outfile.write(bytesio.getbuffer())
 
-face_classifier = cv2.CascadeClassifier(r'D:\Facial-Emotion-Recognition-main\haarcascade_frontalface_default.xml')
+face_classifier = cv2.CascadeClassifier(r'D:\ts\FER\haarcascade_frontalface_default.xml')
 json_file = open('model_json.json', 'r')
 loaded_model_json = json_file.read()
 json_file.close()
 classifier =tf.keras.models.model_from_json(loaded_model_json)
-classifier.load_weights('D:/Facial-Emotion-Recognition-main/model_weight.h5')
+classifier.load_weights('D:/ts/FER/model_weight.h5')
 emotion_labels = ['Angry','Happy','Neutral', 'Sad', 'Surprise']
 
 
 
 model=tf.keras.models.model_from_json(loaded_model_json)
-model.load_weights('D:/Facial-Emotion-Recognition-main/model_weight.h5')
-faceDetect=cv2.CascadeClassifier(r'D:\Facial-Emotion-Recognition-main\haarcascade_frontalface_default.xml')
+model.load_weights('D:/ts/FER/model_weight.h5')
+faceDetect=cv2.CascadeClassifier(r'D:\ts\FER\haarcascade_frontalface_default.xml')
 labels_dict= {0:'Angry',1:'Happy',2:'Neutral',3:'Sad',4:'Surprise'}
 
 def image_face_detected(image_in):
@@ -195,7 +195,6 @@ def image_face_detected(image_in):
     gray=cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
     faces= faceDetect.detectMultiScale(gray, 1.3, 3)
     get_label = []
-    tempathasil = './fotohasil.jpg'
     for x,y,w,h in faces:
         sub_face_img=gray[y:y+h, x:x+w]
         resized=cv2.resize(sub_face_img,(48,48))
@@ -327,9 +326,8 @@ def statistics_visualizationtwo():
     fig2.update_layout(barmode='stack', yaxis={'categoryorder':'total ascending'})
     st.write("Emotion Barplot",fig2)
 
-main_image = Image.open('D:/Facial-Emotion-Recognition-main/img/dl.png')
-top_image = Image.open('D:/Facial-Emotion-Recognition-main/img/zz.png')
-bot_image = Image.open('D:/Facial-Emotion-Recognition-main/img/aa.png')
+main_image = Image.open('D:/ts/FER/img/dl.png')
+bot_image = Image.open('D:/ts/FER/img/aa.png')
 def main():
     st.image(main_image,use_column_width='auto')
     st.title("Face Emotion Detection Application")
@@ -409,8 +407,9 @@ def main():
                  In this project, a facial expression data will be used which is divided into 5 types of expressions.
                  """)
         with st.expander("See Data Visualization"):
-            eda = Image.open("D:/tes/FER/img/bardata.jpg")
-            st.image(eda, width=300)
+            eda_chart()
+            # eda = Image.open("D:/ts/FER/img/bardata.jpg")
+            # st.image(eda, width=300)
 
         st.markdown("""---""")
 
@@ -532,6 +531,8 @@ def main():
                 image1 = Image.open(uploaded_image)
                 st.image(image1)
                 st.text('Uploaded Image')
+                with open (os.path.join(uploaded_image.name),"wb") as f:
+                    f.write((uploaded_image).getbuffer())
                 #st.write(uploaded_image.name)
 
                 st.markdown("""---""")
