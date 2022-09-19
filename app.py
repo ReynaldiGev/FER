@@ -330,7 +330,7 @@ main_image = Image.open('D:/ts/FER/img/dl.png')
 bot_image = Image.open('D:/ts/FER/img/aa.png')
 def main():
     st.image(main_image,use_column_width='auto')
-    st.title("Face Emotion Detection Application")
+    st.title("Facial Emotion Recognition App")
     with st.sidebar:
         st_lottie(lottie_welcome, key="welcome")
     #st.sidebar.image(top_image, use_column_width='auto')
@@ -338,7 +338,7 @@ def main():
     with st.sidebar:
         choice = option_menu(
             menu_title="Select Activity",
-            options=["Introduction", "Dataset", "Run App","About Me"],
+            options=["Introduction", "Dataset", "Run App","Profile"],
             icons=["house", "folder2","cpu","person-lines-fill"],
             menu_icon="cast",
             default_index=0,
@@ -557,7 +557,7 @@ def main():
                     statistics_visualizationtwo()
 
 
-    elif choice == "About Me":
+    elif choice == "Profile":
         st.markdown("<h1 style='text-align: center;</h1> [![Foo](https://content.linkedin.com/content/dam/me/business/en-us/amp/brand-site/v2/bg/LI-Bug.svg.original.svg)](https://www.linkedin.com/in/reynaldihutapea/)", unsafe_allow_html=True)
         html_temp_home1 = """<div style="padding:10px">
                                         <h4 style="color:white;text-align:center;font-size:18px;">
