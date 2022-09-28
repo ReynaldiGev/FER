@@ -1,4 +1,4 @@
-keras==2.9.0
+keras-cpu==2.9.0
 matplotlib==3.5.1
 moviepy==1.0.3
 numpy==1.21.5
