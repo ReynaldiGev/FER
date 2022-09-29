@@ -1,7 +1,6 @@
 from cgitb import text
 import base64
 import time
-from turtle import width
 import requests
 import csv
 import streamlit as st
@@ -9,7 +8,6 @@ from streamlit_option_menu import option_menu
 from streamlit_lottie import st_lottie
 from streamlit_lottie import st_lottie_spinner
 import tempfile
-from textwrap import fill
 import streamlit as st
 import numpy as np
 import matplotlib.pyplot as plt
