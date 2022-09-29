@@ -8,8 +8,6 @@ import streamlit as st
 from streamlit_option_menu import option_menu
 from streamlit_lottie import st_lottie
 from streamlit_lottie import st_lottie_spinner
-from operator import truediv
-from re import template
 import tempfile
 from textwrap import fill
 import streamlit as st
@@ -22,10 +20,8 @@ import pandas as pd
 import os
 from PIL import Image
 import tensorflow as tf
-from keras.models import load_model
 from keras.preprocessing import image
 import cv2
-import moviepy.editor as moviepy
 from streamlit_webrtc import webrtc_streamer, VideoTransformerBase, RTCConfiguration, VideoProcessorBase, WebRtcMode
 
 train_data_dir='dataset/train'
