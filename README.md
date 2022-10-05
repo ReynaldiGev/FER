@@ -1,2 +1,2 @@
 # Facial Emotion Recognition
-![App Screenshot]("https://cdn-images-1.medium.com/fit/t/1600/480/0*CGch7hzdjg1fpgKy.jpg")
+![App Screenshot]("https://acart.com/wp-content/uploads/2017/04/facial-recognition-img2.jpg")
