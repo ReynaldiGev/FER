@@ -1,2 +1,2 @@
 # Facial Emotion Recognition
-![App Screenshot]("C:/Users/LENOVO/Downloads/facial-emotion-recognition-steps.jpg")
+![App Screenshot]("https://cdn-images-1.medium.com/fit/t/1600/480/0*CGch7hzdjg1fpgKy.jpg")
