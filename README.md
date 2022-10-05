@@ -1,2 +1,2 @@
 # Facial Emotion Recognition
-![App Screenshot](https://recfaces.com/wp-content/uploads/2021/03/rf-emotion-recognition-rf-830x495-1.jpeg)
+![App Screenshot](https://edps.europa.eu/sites/default/files/styles/edps_wysiwyg_image/public/2021-05/facial-emotion-recognition-steps.png?itok=jYN0mnzI)
